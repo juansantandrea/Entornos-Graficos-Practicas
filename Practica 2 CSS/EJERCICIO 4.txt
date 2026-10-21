@@ -1,0 +1,44 @@
+EJERCICIO 4
+Declaraciones:
+→ color verde en todos los elementos.
+a:link → enlace sin visitar: gris.
+a:visited → enlace visitado: azul.
+a:hover → mouse encima del enlace: fucsia.
+a:active → al hacer clic en el enlace: rojo.
+p → fuente Arial/Helvetica, tamaño 10px, color negro.
+.contenido → tamaño 14px y negrita.
+Código 1: la clase está en el
+
+Párrafo
+
+Color: negro. La regla p le gana a *.
+Fuente: Arial/Helvetica, por la regla p.
+Tamaño: 14px. .contenido es más específica que p (10px).
+Peso: normal. El style="font-weight: normal" le gana a .contenido (negrita).
+Tabla
+
+Color: verde, por la regla *.
+Tamaño, fuente y peso: los del navegador. Ninguna regla se los da y el no tiene clase.
+Enlace
+
+Color: gris sin visitar, azul si ya fue visitado, fucsia con el mouse encima y rojo al hacer clic. Las reglas a:... le ganan a *.
+Tamaño, fuente y peso: los del navegador.
+Código 2: la clase está en el
+
+Párrafo
+
+Color: negro, por la regla p.
+Fuente: Arial/Helvetica, por la regla p.
+Tamaño: 10px. La regla p es directa y le gana al 14px heredado del body.
+Peso: negrita, heredado del body (ninguna regla directa lo cambia).
+Tabla
+
+Color: verde, por la regla *.
+Tamaño: 14px, heredado del body.
+Peso: negrita, heredado del body.
+Fuente: la del navegador, porque el body no define fuente.
+Enlace
+
+Color: gris, azul, fucsia o rojo según el estado.
+Tamaño: 14px, heredado.
+Peso: negrita, heredado.

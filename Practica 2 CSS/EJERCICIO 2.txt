@@ -1,0 +1,28 @@
+EJERCICIO 2.
+a. 
+Selector: p#normal; Selector combinado de etiqueta e ID.
+Declaraciones:
+-font-family: arial,helvetica;: Define la familia tipográfica principal como Arial y Helvetica como alternativa.
+-font-size: 11px;: Establece el tamaño de la fuente en 11 píxeles.
+-font-weight: bold;: Aplica estilo de texto en negrita.
+
+b. 
+Selector: *#destacado; Selector universal combinado con ID.
+-border-style: solid;: Establece la línea del borde como continua/sólida.
+-border-color: blue;: Define el color del borde como azul.
+-border-width: 2px;: Asigna un grosor al borde de 2 píxeles.
+
+c. 
+Selector: #distinto; Selector de ID.
+Declaraciones:
+-background-color: #9EC7EB;: Establece el fondo en un tono azul claro mediante su código hexadecimal.
+-color: red;: Cambia el color del texto a rojo.
+
+d. 
+"Este es un párrafo" (<p id="normal">); Se muestra con letra Arial/Helvetica, tamaño pequeño de 11px y en negrita.
+
+e.
+"Este es otro párrafo" (<p id="destacado">); Conserva su tipografía por defecto, pero queda encerrado en un borde azul sólido de 2px de grosor.
+
+f.
+"Este es el último párrafo" (<p>); No posee ningún id ni coincide con un selector genérico; se visualiza con los estilos por defecto del navegador.

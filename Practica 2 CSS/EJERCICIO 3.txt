@@ -1,0 +1,19 @@
+EJERCICIO 3.
+Regla 1: p.quitar { color: red; }
+Selector: elemento p con la clase quitar
+Declaración: color: red; (propiedad color, valor red).
+Se aplica a: solo a los p que tengan la clase quitar.
+Efecto: el texto de esos párrafos se ve en rojo.
+*Regla 2: .desarrollo { font-size: 8px; }
+Selector: selector universal * + clase desarrollo.
+Declaración: font-size: 8px;
+Se aplica a: cualquier elemento con la clase desarrollo.
+Efecto: el texto se muestra en 8 píxeles (muy pequeño).
+Regla 3: .importante { font-size: 20px; }
+Selector: solo la clase importante, sin restricción de tipo de elemento.
+Declaración: font-size: 20px;
+Se aplica a: cualquier elemento con la clase importante.
+Efecto: el texto se muestra en 20 píxeles (grande).
+El h1 class="quitar" no se pone rojo. Tiene la clase quitar, pero la regla es p.quitar y exige que el elemento sea un p. Para que también afectara al encabezado, el selector tendría que ser .quitar.
+El tercer párrafo no recibe ningún estilo. Al no tener atributo class, ningún selector coincide. Se ve con el tamaño y color por defecto.
+El último párrafo combina dos clases. Con class="quitar importante" coinciden dos reglas: p.quitar aporta color: red. .importante aporta font-size: 20px.

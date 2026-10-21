@@ -1,0 +1,124 @@
+EJERCICIO 1.
+1. 
+CSS son las siglas de hojas de estilo en cascada.
+Las hojas de estilo es una tecnología que nos permite controlar
+la apariencia de una página web.
+CSS describe como los elementos dispuestos en la página son
+presentados al usuario.
+Con CSS podemos especificar estilos como el tamaño, fuentes,
+color, espaciado entre textos y recuadros así como el lugar
+donde disponer texto e imágenes en la página.
+
+2. 
+Una regla es un tipo de estamento que (1) identifica un elemento de la página HTML y (2) le indica al navegador el estilo que deberá tener ese elemento.
+Cada regla consta de: un selector (P) que identifica (o selecciona) un elemento de la página Web.
+Al selector le sigue un bloque de declaraciones que comienza con una llave de apertura ({) y termina con otra llave de cierre (}). Entre las llaves van las declaraciones (background-color: red; color: #FFFFFF), que son las que le indican al browser el estilo para el elemento seleccionado.
+Las declaraciones, a su vez, tienen dos partes: una propiedad (background-color, color) que consiste en alguna de las palabras claves definidas por el lenguaje, seguida de dos puntos (:) y un valor (red, #FFFFFF) para esa propiedad. Existen distintos valores y cada propiedad puede aceptar algunos de esos valores.
+El otro tipo de estamento se llama regla arroba porque comienza con el carácter arroba (@) seguido inmediatamente (es decir, sin espacios intermedios) por un identificador. Según de qué regla arroba se trate finalizará con un punto y coma (;) o podrá tener un bloque de declaraciones posterior.
+Las reglas arroba sirven para indicarle al navegador algo más que un estilo de composición
+
+3.
+NIVEL DE ELEMENTO HTML:
+Es la forma más fácil pero menos recomendada para aplicación de
+un estilo a un elemento HTML.
+Se define en la propiedad style los estilos a definir para dicho
+elemento.
+Es común a veces definir estilos directamente en los elementos
+HTML cuando estamos probando diseños de elementos
+particulares de la página y posteriormente trasladar el estilo
+creado a la zona de definición de estilos.
+
+NIVEL DE PAGINA:
+Podemos hacer la definición de estilos para los distintos elementos
+HTML de la página en una sección especial de la cabecera que la
+encerramos entre las marcas HTML (en su interior definimos los
+estilos para los elementos HTML que necesitemos):
+<style>
+</style>
+
+EN UN ARCHIVO EXTERNO:
+Se escribe en un archivo independiente con extensión .css y se vincula al documento HTML mediante la etiqueta <link> en el <head>. Es la forma estándar y recomendada para mantener el código organizado y reutilizable.
+
+
+4.
+Selector universal (*):
+Selecciona absolutamente todos los elementos del documento HTML.
+EJ: 
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+Selector de tipo / etiqueta: 
+Selecciona todos los elementos HTML que coinciden con el nombre de la etiqueta.
+EJ: 
+p {
+  line-height: 1.5;
+}
+
+Selectores de descendientes:
+A veces, los autores pueden querer selectores que se correspondan con un elemento que es el descendiente de otro elemento en la estructura del documento 
+EJ: 
+div p { color: gray; }
+
+Selectores de hijos: 
+Un selector de hijo equivale cuando un elemento es el hijo de algún elemento. Un selector de hijo se compone de dos o más selectores separados por ">".
+EJ:
+ul > li { list-style: none; }
+
+Selectores de hermanos adyacentes:
+Los selectores de hermanos adyacentes tiene la siguiente sintaxis: E1 + E2, donde E2 es el sujeto del selector. El selector equivale si E1 y E2 comparten el mismo padre en la estructura del documento y E1 precede inmediatamente a E2.
+En algunos contextos, los elementos adyacentes generan objetos con formato cuya presentación es operada automáticamente (ej., cerrando los márgenes verticales entre cajas adyacentes). El selector "+" permite a los autores especificar un estilo adicional para los elementos adyacentes.
+EJ: 
+MATH + P { text-indent: 0 } 
+
+Selectores de atributos:
+CSS2 permite a los autores especificar reglas que sean equivalentes con atributos definidos en el documento fuente.
+Los selectores de atributos puede equivaler de cuatro maneras:
+[att]
+Equivale con los elementos que tienen asignado el atributo "att", cualquiera sea el valor del atributo.
+[att=val]
+Equivale cuando el valor del atributo "att" del elemento es exactamente "val".
+[att~=val]
+Equivale cuando el valor del atributo "att" del elemento es una lista de "palabras" separadas por espacios, una de las cuales es exactamente "val". Si se usa este selector, las palabras en el valor no deben contener espacios (ya que ellas están separadas por espacios).
+[att|=val]
+Equivale cuando el valor del atributo "att" del elemento es una lista de "palabras" separadas por guiones, comenzando con "val". La correspondencia siempre comienza al principio del valor del atributo.
+EJ: 
+H1[title] { color: blue; }
+
+Selector de clase:
+Selecciona los elementos que poseen el atributo class especificado. Puede reocuparse en múltiples elementos.
+EJ:
+.boton-principal {
+  background-color: blue;
+  color: white;
+}
+
+Selector de ID:
+Selecciona un único elemento que posee el atributo id especificado. Los IDs deben ser únicos dentro de un documento.
+EJ:
+#encabezado-principal {
+  text-align: center;
+}
+
+
+5.
+La pseudo-clase :first-child equivale a un elemento que es el primer hijo de algún otro elemento.
+La pseudo-clase :link se aplica a los vínculos que aún no han sido visitados.
+La pseudo-clase :visited se aplica una vez que el vínculo ha sido visitado por el usuario.
+
+
+6.
+Algunos valores son heredados por los hijos de un elemento en la estructura del documento. Cada propiedad define si se hereda o no.
+Propiedades que se heredan por defecto: Principalmente propiedades relacionadas con el texto y la tipografía.
+Propiedades que NO se heredan: Propiedades relacionadas con la estructura, dimensiones y caja.
+
+
+7.
+Las hojas de estilo pueden tener tres orígenes diferentes: el autor, el usuario y la aplicación del usuario.
+
+Autor: El autor especifica las hojas de estilo para un documento fuente de acuerdo a las convenciones del lenguaje del documento. Por ejemplo, en HTML, las hojas de estilo pueden incluirse en el documento o vincularse externamente.
+Usuario: El usuario puede especificar información de estilo para un documento particular. Por ejemplo, el usuario puede especificar un archivo que contenga una hoja de estilo o la aplicación del usuario puede proporcionar una interfaz que genere una hoja de estilo del usuario (o comportarse como si lo hubiese hecho).
+Aplicaciones del usuario: Las aplicaciones del usuario con conformidad deben aplicar una hoja de estilo predeterminada (o comportarse como si lo hubiesen hecho) previa a todas las hojas de estilo para un documento. La hoja de estilo predeterminada de una aplicación del usuario debe presentar los elementos del lenguaje de documento de un modo que satisfaga las expectativas generales de presentación del lenguaje del documento.
+
+
